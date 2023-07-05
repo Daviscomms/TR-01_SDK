@@ -1,0 +1,4 @@
+/* GNU ld script
+*/
+OUTPUT_FORMAT(elf64-x86-64)
+GROUP ( /opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/lib/libm.so.6  AS_NEEDED ( /opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/lib/libmvec.so.1 ) )

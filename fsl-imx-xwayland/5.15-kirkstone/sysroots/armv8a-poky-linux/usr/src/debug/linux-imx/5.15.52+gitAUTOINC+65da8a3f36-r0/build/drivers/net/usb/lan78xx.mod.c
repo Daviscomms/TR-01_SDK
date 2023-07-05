@@ -1,0 +1,182 @@
+#include <linux/module.h>
+#define INCLUDE_VERMAGIC
+#include <linux/build-salt.h>
+#include <linux/elfnote-lto.h>
+#include <linux/vermagic.h>
+#include <linux/compiler.h>
+
+BUILD_SALT;
+BUILD_LTO_INFO;
+
+MODULE_INFO(vermagic, VERMAGIC_STRING);
+MODULE_INFO(name, KBUILD_MODNAME);
+
+__visible struct module __this_module
+__section(".gnu.linkonce.this_module") = {
+	.name = KBUILD_MODNAME,
+	.init = init_module,
+#ifdef CONFIG_MODULE_UNLOAD
+	.exit = cleanup_module,
+#endif
+	.arch = MODULE_ARCH_INIT,
+};
+
+MODULE_INFO(intree, "Y");
+
+#ifdef CONFIG_RETPOLINE
+MODULE_INFO(retpoline, "Y");
+#endif
+
+static const struct modversion_info ____versions[]
+__used __section("__versions") = {
+	{ 0xc30f8a7c, "module_layout" },
+	{ 0xbcde32ad, "param_ops_int" },
+	{ 0x2f9c5759, "ethtool_op_get_ts_info" },
+	{ 0x5ef6c4da, "phy_ethtool_nway_reset" },
+	{ 0xd726607, "phy_do_ioctl_running" },
+	{ 0x1aff05fc, "eth_validate_addr" },
+	{ 0xf75d67ac, "usb_deregister" },
+	{ 0x3082df47, "usb_register_driver" },
+	{ 0xa0300885, "usb_anchor_urb" },
+	{ 0xaf80d873, "skb_trim" },
+	{ 0xa777c81e, "skb_clone" },
+	{ 0x9d127634, "skb_pull" },
+	{ 0x642c5769, "usb_autopm_get_interface_async" },
+	{ 0x645f857, "__alloc_skb" },
+	{ 0x6ebe366f, "ktime_get_mono_fast_ns" },
+	{ 0x1a7137b5, "skb_put" },
+	{ 0x4ef660c1, "__netdev_alloc_skb" },
+	{ 0x2815f617, "netif_tx_wake_queue" },
+	{ 0x39548913, "usb_clear_halt" },
+	{ 0x49c23793, "skb_tstamp_tx" },
+	{ 0xca320b7, "__dev_kfree_skb_any" },
+	{ 0x33ff7af4, "pskb_expand_head" },
+	{ 0x28d0c853, "skb_queue_tail" },
+	{ 0x890342b2, "skb_push" },
+	{ 0x9f46ced8, "__sw_hweight64" },
+	{ 0xf5754987, "netif_carrier_off" },
+	{ 0x2b68bd2f, "del_timer" },
+	{ 0xd745e710, "netif_device_attach" },
+	{ 0x450ea23a, "phy_start" },
+	{ 0xc38c83b8, "mod_timer" },
+	{ 0xf5a30ca1, "usb_get_from_anchor" },
+	{ 0x4b750f53, "_raw_spin_unlock_irq" },
+	{ 0x8427cc7b, "_raw_spin_lock_irq" },
+	{ 0xbe6e8616, "usb_autopm_put_interface_async" },
+	{ 0x296c787e, "phy_stop" },
+	{ 0xea3c74e, "tasklet_kill" },
+	{ 0xba8fbd64, "_raw_spin_lock" },
+	{ 0xb5b54b34, "_raw_spin_unlock" },
+	{ 0x692ddc79, "usb_kill_urb" },
+	{ 0x97934ecf, "del_timer_sync" },
+	{ 0x807766ea, "usb_scuttle_anchored_urbs" },
+	{ 0x9fa7184a, "cancel_delayed_work_sync" },
+	{ 0x49d4d739, "unregister_netdev" },
+	{ 0x6f3c2663, "netif_device_detach" },
+	{ 0x7ceaf0d5, "generic_handle_irq" },
+	{ 0x4b0a3f52, "gic_nonsecure_priorities" },
+	{ 0x1d163a9f, "usb_submit_urb" },
+	{ 0xb2fcb56d, "queue_delayed_work_on" },
+	{ 0x9d2ab8ac, "__tasklet_schedule" },
+	{ 0x5e2d7875, "cpu_hwcap_keys" },
+	{ 0x14b89635, "arm64_const_caps_ready" },
+	{ 0xd738ca1b, "phy_unregister_fixup_for_uid" },
+	{ 0x6d06ec7, "fixed_phy_unregister" },
+	{ 0xe04c476a, "_dev_err" },
+	{ 0xc1dcd1f4, "fixed_phy_register" },
+	{ 0x8ddd463a, "pm_runtime_set_autosuspend_delay" },
+	{ 0x14efd444, "netdev_err" },
+	{ 0xeada1463, "phy_disconnect" },
+	{ 0xbf8e4c5f, "register_netdev" },
+	{ 0x351da8ee, "__genphy_config_aneg" },
+	{ 0x167275f1, "of_property_count_elems_of_size" },
+	{ 0xee91b4a9, "phy_remove_link_mode" },
+	{ 0xc4b2b8ad, "phy_connect_direct" },
+	{ 0x7b0c83f4, "phy_register_fixup_for_uid" },
+	{ 0xa4ac6f35, "phy_find_first" },
+	{ 0x4f2a6696, "usb_alloc_urb" },
+	{ 0xeb233a45, "__kmalloc" },
+	{ 0xd732eb5f, "of_node_put" },
+	{ 0xa072a74, "of_mdiobus_register" },
+	{ 0x2af0731c, "of_get_child_by_name" },
+	{ 0x5e3694b8, "mdiobus_alloc_size" },
+	{ 0x2067be17, "irq_create_mapping_affinity" },
+	{ 0x259d1d2, "irq_domain_create_simple" },
+	{ 0x3b1e5f7a, "handle_simple_irq" },
+	{ 0xb84a53f8, "usb_put_dev" },
+	{ 0xfdd9e64b, "free_netdev" },
+	{ 0xd9a5ea54, "__init_waitqueue_head" },
+	{ 0xc6f46339, "init_timer_key" },
+	{ 0xffeedf6a, "delayed_work_timer_fn" },
+	{ 0xa07d1b3c, "tasklet_setup" },
+	{ 0xcefb0c9f, "__mutex_init" },
+	{ 0x93892abc, "alloc_etherdev_mqs" },
+	{ 0x6a5d6b2, "usb_get_dev" },
+	{ 0x977ede3c, "netdev_info" },
+	{ 0x41ed3709, "get_random_bytes" },
+	{ 0xa5098ea2, "eth_platform_get_mac_address" },
+	{ 0xa084749a, "__bitmap_or" },
+	{ 0x38b9e253, "genphy_read_status" },
+	{ 0x3c12dfe, "cancel_work_sync" },
+	{ 0xcf8bab00, "irq_domain_remove" },
+	{ 0x2c7db649, "irq_dispose_mapping" },
+	{ 0xeece192d, "mdiobus_free" },
+	{ 0x35d632f1, "mdiobus_unregister" },
+	{ 0xc5b6f236, "queue_work_on" },
+	{ 0x2d3385d3, "system_wq" },
+	{ 0x69dd3b5b, "crc32_le" },
+	{ 0xdcb764ad, "memset" },
+	{ 0xc1d224fd, "kfree_skb" },
+	{ 0xafa5f04b, "skb_dequeue" },
+	{ 0x37110088, "remove_wait_queue" },
+	{ 0x8ddd8aad, "schedule_timeout" },
+	{ 0x4afb2238, "add_wait_queue" },
+	{ 0xaad8c7d6, "default_wake_function" },
+	{ 0x7fdd07ce, "usb_free_urb" },
+	{ 0xea610d1, "usb_unlink_urb" },
+	{ 0xd156d47f, "usb_get_urb" },
+	{ 0x656e4a6e, "snprintf" },
+	{ 0x9166fada, "strncpy" },
+	{ 0xb2f181d6, "skb_copy_bits" },
+	{ 0x2ca474e7, "__pskb_pull_tail" },
+	{ 0x4829a47e, "memcpy" },
+	{ 0x3a7fce6b, "phy_write_mmd" },
+	{ 0x4e43244a, "phy_read_mmd" },
+	{ 0x7522f3ba, "irq_modify_status" },
+	{ 0x20a789ac, "irq_set_chip_data" },
+	{ 0x1803521d, "irq_set_chip_and_handler_name" },
+	{ 0x4d7183ea, "netif_rx" },
+	{ 0xa97fd475, "eth_type_trans" },
+	{ 0xa55c7b7, "phy_ethtool_set_wol" },
+	{ 0xf0ba9bb8, "device_set_wakeup_enable" },
+	{ 0x1e78af38, "phy_ethtool_get_eee" },
+	{ 0x4edbb9bc, "phy_ethtool_set_eee" },
+	{ 0x7cb87f53, "phy_ethtool_ksettings_get" },
+	{ 0xda6497f4, "mdiobus_write" },
+	{ 0xa94b659c, "mdiobus_read" },
+	{ 0x4d2cc308, "phy_ethtool_ksettings_set" },
+	{ 0xbace84ba, "usb_autopm_put_interface" },
+	{ 0x24a9bdb3, "usb_autopm_get_interface" },
+	{ 0xf9a482f9, "msleep" },
+	{ 0x3213f038, "mutex_unlock" },
+	{ 0x4dfa8d4b, "mutex_lock" },
+	{ 0xd35cce70, "_raw_spin_unlock_irqrestore" },
+	{ 0x34db050b, "_raw_spin_lock_irqsave" },
+	{ 0xeae3dfd6, "__const_udelay" },
+	{ 0x3ea1b6e4, "__stack_chk_fail" },
+	{ 0xc3055d20, "usleep_range_state" },
+	{ 0x15ba50a6, "jiffies" },
+	{ 0xc77d8a28, "netdev_warn" },
+	{ 0xf6ebc03b, "net_ratelimit" },
+	{ 0x37a0cba, "kfree" },
+	{ 0xdaf7c20b, "usb_control_msg" },
+	{ 0xbeb162f8, "kmem_cache_alloc" },
+	{ 0x96c47d00, "kmalloc_caches" },
+};
+
+MODULE_INFO(depends, "");
+
+MODULE_ALIAS("usb:v0424p7800d*dc*dsc*dp*ic*isc*ip*in*");
+MODULE_ALIAS("usb:v0424p7850d*dc*dsc*dp*ic*isc*ip*in*");
+MODULE_ALIAS("usb:v0424p7801d*dc*dsc*dp*ic*isc*ip*in*");
+MODULE_ALIAS("usb:v07C9p0012d*dc*dsc*dp*ic*isc*ip*in*");

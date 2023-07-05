@@ -1,0 +1,160 @@
+#include <linux/module.h>
+#define INCLUDE_VERMAGIC
+#include <linux/build-salt.h>
+#include <linux/elfnote-lto.h>
+#include <linux/vermagic.h>
+#include <linux/compiler.h>
+
+BUILD_SALT;
+BUILD_LTO_INFO;
+
+MODULE_INFO(vermagic, VERMAGIC_STRING);
+MODULE_INFO(name, KBUILD_MODNAME);
+
+__visible struct module __this_module
+__section(".gnu.linkonce.this_module") = {
+	.name = KBUILD_MODNAME,
+	.init = init_module,
+#ifdef CONFIG_MODULE_UNLOAD
+	.exit = cleanup_module,
+#endif
+	.arch = MODULE_ARCH_INIT,
+};
+
+MODULE_INFO(intree, "Y");
+
+#ifdef CONFIG_RETPOLINE
+MODULE_INFO(retpoline, "Y");
+#endif
+
+static const struct modversion_info ____versions[]
+__used __section("__versions") = {
+	{ 0xc30f8a7c, "module_layout" },
+	{ 0xce3a21c1, "dm_unregister_target" },
+	{ 0xffd02855, "dm_register_target" },
+	{ 0x8cbb4d81, "dm_accept_partial_bio" },
+	{ 0x9d2ab8ac, "__tasklet_schedule" },
+	{ 0x2364c85a, "tasklet_init" },
+	{ 0x4dfa8d4b, "mutex_lock" },
+	{ 0x3213f038, "mutex_unlock" },
+	{ 0xef4b7a44, "bio_add_page" },
+	{ 0x83b221b0, "bio_alloc_bioset" },
+	{ 0x56470118, "__warn_printk" },
+	{ 0xd078248, "crypto_aead_encrypt" },
+	{ 0xc3762aec, "mempool_alloc" },
+	{ 0xfcf15497, "crypto_skcipher_decrypt" },
+	{ 0x21ef374c, "try_wait_for_completion" },
+	{ 0xef6a7533, "crypto_aead_decrypt" },
+	{ 0xf888ca21, "sg_init_table" },
+	{ 0xc60d0620, "__num_online_cpus" },
+	{ 0xf6041217, "crypto_aead_setauthsize" },
+	{ 0xa6867bd5, "kthread_create_on_node" },
+	{ 0x49cd25ed, "alloc_workqueue" },
+	{ 0xda81a235, "dm_table_get_md" },
+	{ 0xca919e7, "dm_get_device" },
+	{ 0x2617e53d, "dm_table_get_mode" },
+	{ 0xcefb0c9f, "__mutex_init" },
+	{ 0x65c2e3a4, "bioset_init" },
+	{ 0x85df9b6c, "strsep" },
+	{ 0x15c85de3, "mempool_init" },
+	{ 0xd35a6d31, "mempool_kmalloc" },
+	{ 0x6a037cf1, "mempool_kfree" },
+	{ 0x5eb24829, "dm_shift_arg" },
+	{ 0xc7d094b5, "dm_read_arg_group" },
+	{ 0x20cbb30a, "__percpu_counter_init" },
+	{ 0x489fe49a, "dm_table_device_name" },
+	{ 0xaafdc258, "strcasecmp" },
+	{ 0x29554b43, "key_type_logon" },
+	{ 0x995b624e, "key_type_user" },
+	{ 0xde31500c, "key_put" },
+	{ 0x53b954a2, "up_read" },
+	{ 0x668b19a1, "down_read" },
+	{ 0x6a143c2d, "request_key_tag" },
+	{ 0x2d39b0a7, "kstrdup" },
+	{ 0x6ced68fb, "key_type_trusted" },
+	{ 0x11089ac7, "_ctype" },
+	{ 0x50cf7585, "hex2bin" },
+	{ 0x1dc6c050, "bio_devname" },
+	{ 0x1d24c881, "___ratelimit" },
+	{ 0xa6257a2f, "complete" },
+	{ 0xa3c0905c, "wake_up_process" },
+	{ 0xd35cce70, "_raw_spin_unlock_irqrestore" },
+	{ 0xa5526619, "rb_insert_color" },
+	{ 0x34db050b, "_raw_spin_lock_irqsave" },
+	{ 0x3bc8a998, "bio_put" },
+	{ 0x7e70f280, "bio_associate_blkg" },
+	{ 0x79b028da, "bio_clone_fast" },
+	{ 0x266a4b08, "tasklet_unlock" },
+	{ 0xc5b6f236, "queue_work_on" },
+	{ 0x6215a1fd, "crypto_alloc_shash" },
+	{ 0x5e2d7875, "cpu_hwcap_keys" },
+	{ 0x14b89635, "arm64_const_caps_ready" },
+	{ 0x95b49d69, "crypto_alloc_ahash" },
+	{ 0x9166fada, "strncpy" },
+	{ 0x5a921311, "strncmp" },
+	{ 0x656e4a6e, "snprintf" },
+	{ 0xe2d5255a, "strcmp" },
+	{ 0x9f984513, "strrchr" },
+	{ 0x90f10221, "crypto_aead_setkey" },
+	{ 0x25974000, "wait_for_completion" },
+	{ 0xf234f2db, "crypto_skcipher_encrypt" },
+	{ 0xb04fb8b8, "crypto_req_done" },
+	{ 0xb320cc0e, "sg_init_one" },
+	{ 0x815f2897, "empty_zero_page" },
+	{ 0x9688de8b, "memstart_addr" },
+	{ 0xe4bbc1dd, "kimage_voffset" },
+	{ 0x608741b5, "__init_swait_queue_head" },
+	{ 0x43b0c9c3, "preempt_schedule" },
+	{ 0xb5b54b34, "_raw_spin_unlock" },
+	{ 0x944375db, "_totalram_pages" },
+	{ 0xba8fbd64, "_raw_spin_lock" },
+	{ 0x24f5f47e, "dm_put_device" },
+	{ 0xac537ac2, "percpu_counter_destroy" },
+	{ 0x53126ecc, "__percpu_counter_sum" },
+	{ 0x38e46431, "mempool_exit" },
+	{ 0xfe0ff26f, "bioset_exit" },
+	{ 0x8c03d20c, "destroy_workqueue" },
+	{ 0x7e1a236, "kthread_stop" },
+	{ 0xa3f12f69, "__crypto_xor" },
+	{ 0x3f6e180b, "crypto_shash_final" },
+	{ 0x487bdcb4, "dm_per_bio_data" },
+	{ 0xeb233a45, "__kmalloc" },
+	{ 0x7c21a9ae, "bio_integrity_add_page" },
+	{ 0xb757b5d1, "bio_integrity_alloc" },
+	{ 0xa897e3e7, "mempool_free" },
+	{ 0x8aab5f62, "crypto_shash_update" },
+	{ 0xa8b3f5b7, "crypto_alloc_skcipher" },
+	{ 0xa8a63a2b, "crypto_alloc_aead" },
+	{ 0xbeb162f8, "kmem_cache_alloc" },
+	{ 0x96c47d00, "kmalloc_caches" },
+	{ 0xbc830eb7, "alloc_pages" },
+	{ 0xe138fb8c, "percpu_counter_add_batch" },
+	{ 0x5240ee7, "percpu_counter_batch" },
+	{ 0x15095868, "__free_pages" },
+	{ 0xb1d3a15c, "blk_finish_plug" },
+	{ 0x4ffaaca4, "submit_bio_noacct" },
+	{ 0x4d9b652b, "rb_erase" },
+	{ 0xece784c2, "rb_first" },
+	{ 0x79ec8f93, "blk_start_plug" },
+	{ 0xb3f7646e, "kthread_should_stop" },
+	{ 0x4b750f53, "_raw_spin_unlock_irq" },
+	{ 0x1000e51, "schedule" },
+	{ 0x8427cc7b, "_raw_spin_lock_irq" },
+	{ 0xd0760fc0, "kfree_sensitive" },
+	{ 0x37a0cba, "kfree" },
+	{ 0xe4d41d88, "crypto_destroy_tfm" },
+	{ 0xc7da3fee, "bio_endio" },
+	{ 0x96848186, "scnprintf" },
+	{ 0x41ed3709, "get_random_bytes" },
+	{ 0x80d432ce, "crypto_skcipher_setkey" },
+	{ 0x4829a47e, "memcpy" },
+	{ 0x3ea1b6e4, "__stack_chk_fail" },
+	{ 0xbcab6ee6, "sscanf" },
+	{ 0x349cba85, "strchr" },
+	{ 0x98cf60b3, "strlen" },
+	{ 0xdcb764ad, "memset" },
+	{ 0x92997ed8, "_printk" },
+};
+
+MODULE_INFO(depends, "dm-mod,trusted");
+

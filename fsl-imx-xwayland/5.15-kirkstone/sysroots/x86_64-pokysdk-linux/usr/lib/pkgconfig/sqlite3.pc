@@ -1,0 +1,13 @@
+# Package Information for pkg-config
+
+prefix=/opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/usr
+exec_prefix=/opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/usr
+libdir=/opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/usr/lib
+includedir=/opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/usr/include
+
+Name: SQLite
+Description: SQL database engine
+Version: 3.38.5
+Libs: -L${libdir} -lsqlite3
+Libs.private: -lm 
+Cflags: -I${includedir}

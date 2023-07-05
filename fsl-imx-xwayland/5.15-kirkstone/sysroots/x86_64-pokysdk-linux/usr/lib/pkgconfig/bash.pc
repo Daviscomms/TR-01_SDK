@@ -1,0 +1,28 @@
+# bash.pc.in
+
+prefix=/opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/usr
+exec_prefix=/opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/usr
+includedir=/opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/usr/include
+libdir=/opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/usr/lib
+
+loadablesdir=${libdir}/bash
+headersdir=${includedir}/bash
+
+LOCAL_CFLAGS = 
+LOCAL_DEFS = -DSHELL
+CCFLAGS = ${LOCAL_DEFS} ${LOCAL_CFLAGS}
+
+CC = x86_64-pokysdk-linux-gcc  --sysroot=/home/kcchea/Desktop/daviscomms-bsp/temp_build/tmp/work/x86_64-nativesdk-pokysdk-linux/nativesdk-bash/5.1.16-r0/recipe-sysroot
+SHOBJ_CC = x86_64-pokysdk-linux-gcc --sysroot=/home/kcchea/Desktop/daviscomms-bsp/temp_build/tmp/work/x86_64-nativesdk-pokysdk-linux/nativesdk-bash/5.1.16-r0/recipe-sysroot
+SHOBJ_CFLAGS = -fPIC
+SHOBJ_LD = ${CC}
+SHOBJ_LDFLAGS = -shared -Wl,-soname,$@
+SHOBJ_XLDFLAGS = 
+SHOBJ_LIBS = 
+
+Name: bash
+Description: Bash headers for bash loadable builtins
+Version: 5.1-release
+Url: 
+Libs: ${SHOBJ_LIBS}
+Cflags: ${SHOBJ_CFLAGS} ${CCFLAGS} -I${headersdir} -I${headersdir}/builtins -I${headersdir}/include

@@ -1,0 +1,12 @@
+prefix=/opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/usr
+exec_prefix=/opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/usr
+libdir=/opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/usr/lib
+includedir=/opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/usr/include
+
+Name: libnsl
+Description: Library containing NIS functions using TI-RPC (IPv6 enabled)
+Requires: libtirpc >= 1.0.1
+Version: 2.0.0
+Libs: -L/opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/usr/lib -lnsl
+Cflags: -I/opt/fsl-imx-xwayland/5.15-kirkstone/sysroots/x86_64-pokysdk-linux/usr/include
+

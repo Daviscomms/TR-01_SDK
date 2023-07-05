@@ -1,0 +1,48 @@
+Dir "/home/kcchea/Desktop/daviscomms-bsp/temp_build/tmp/work/imx8mp_lpddr4_evk-poky-linux/core-image-minimal/1.0-r0/recipe-sysroot-native/"
+{
+   State "var/lib/apt/"
+   {
+      Lists "#APTCONF#/lists/";
+      status "#ROOTFS#/var/lib/dpkg/status";
+   };
+   Cache "var/cache/apt/"
+   {
+      Archives "archives/";
+      pkgcache "";
+      srcpkgcache "";
+   };
+   Bin "/home/kcchea/Desktop/daviscomms-bsp/temp_build/tmp/work/imx8mp_lpddr4_evk-poky-linux/core-image-minimal/1.0-r0/recipe-sysroot-native/usr/bin/"
+   {
+      methods "/home/kcchea/Desktop/daviscomms-bsp/temp_build/tmp/work/imx8mp_lpddr4_evk-poky-linux/core-image-minimal/1.0-r0/recipe-sysroot-native/usr/lib/apt/methods/";
+      gzip "/bin/gzip";
+      dpkg "dpkg";
+      dpkg-source "dpkg-source";
+      dpkg-buildpackage "dpkg-buildpackage";
+      apt-get "apt-get";
+      apt-cache "apt-cache";
+   };
+   Etc "#APTCONF#"
+   {
+      Preferences "preferences";
+   };
+   Log "var/log/apt";
+};
+
+APT
+{
+  Install-Recommends "true";
+  Immediate-Configure "false";
+  Architecture "i586";
+  Get
+  {
+     Assume-Yes "true";
+  };
+};
+
+Acquire
+{
+  AllowInsecureRepositories "true";
+};
+
+DPkg::Options {"--root=#ROOTFS#";"--admindir=#ROOTFS#/var/lib/dpkg";"--force-all";"--no-debsig"};
+DPkg::Path "";
